@@ -24,7 +24,7 @@ function rnd(a = 1, b = 0, s = []) =
 function vsum(l) = len(l) > 0 ? [for (li = l) 1] * l : undef;
 
 // Main module for creating a flower shape with intuitive parameters
-module createFlower(radius = 100, complexity = 5, waveCount = 3, amplitudeRange = [0.5, 0.75], hRange = [2, 5], drawLines = false) {
+module createFlower(radius = 100, complexity = 5, waveCount = 3, amplitudeRange = [0.5, 0.75], hRange = [2, 5]) {
     local_a = concat([rnd(amplitudeRange[0]), rnd(amplitudeRange[1])], [for (k = [0 : 1 : 30]) rnd(1)]);
     local_p = FlowerF(
       radius,
@@ -34,11 +34,8 @@ module createFlower(radius = 100, complexity = 5, waveCount = 3, amplitudeRange 
       [min(hRange[0], hRange[1]) : 1 : max(hRange[0], hRange[1])]
     );
 
-    if (drawLines)
-        polyline(local_p);
-    else
-        polygon(local_p);
+    polygon(local_p);
 }
 
 // Example usage of the module
-createFlower(radius = 120, complexity = 200, waveCount = 3, amplitudeRange = [0.5, 1], hRange = [2, 6], drawLines = false);
+createFlower(radius = 120, complexity = 200, waveCount = 3, amplitudeRange = [0.5, 1], hRange = [2, 6]);

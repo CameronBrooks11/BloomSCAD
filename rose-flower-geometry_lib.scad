@@ -5,6 +5,8 @@
 //   n: Symmetry factor. Should be a positive integer.
 //   radius: Radius of the rose curve. Should be a positive number.
 //   step: Step size for theta. Smaller values result in smoother curves.
+// Inspired by: https://eribuijs.blogspot.com/2017/03/creating-mathematical-rose-in-openscad.html
+
 
 // Default values for parameters
 step = 1;

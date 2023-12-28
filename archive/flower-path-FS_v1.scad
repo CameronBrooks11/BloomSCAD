@@ -1,4 +1,4 @@
-
+// https://openscadsnippetpad.blogspot.com/2017/06/flower-shape-path-fourier-series.html
 
 function FlowerF(r=100,isteps=5,w,a,h=2,h2)=
 let(steps=min(isteps*w,300))
